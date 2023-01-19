@@ -1,6 +1,6 @@
 import './App.css';
 
-import Sidebar from './components/sidebar';
+import Sidebar from './components/Sidebar';
 
 function App() {
    return (
@@ -8,8 +8,8 @@ function App() {
          <span className="column">
             <Sidebar />
          </span>
-         <span className="column"></span>
-         <span className="column"></span>
+         <span className="column">column 2 / Homepage</span>
+         <span className="column">column 3 / info</span>
       </div>
    );
 }
