@@ -10,12 +10,17 @@ function Sidebar() {
                <a href="#">Home</a>
             </li>
             <li class="sidebar-menu-element">
-               <a href="#">About</a>
+               <a className="about" href="#">
+                  About
+               </a>
             </li>
             <li class="sidebar-menu-element">
                <a href="#">Contact</a>
             </li>
          </ul>
+         <div className="sidebar-share">
+            <a href="/">O</a>
+         </div>
       </div>
    );
 }
