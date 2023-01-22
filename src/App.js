@@ -1,6 +1,6 @@
 import './App.css';
 
-import MainPage from './components/Main/MainPage';
+import MainColumn from './components/MainColumn/MainColumn';
 import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
             <Sidebar />
          </span>
          <span className="column">
-            <MainPage />
+            <MainColumn />
          </span>
          <span className="column">column 3 / info</span>
       </div>

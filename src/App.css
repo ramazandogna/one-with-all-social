@@ -7,6 +7,7 @@ html {
 .container {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
+   height: 100vh;
 }
 
 .column {
@@ -64,4 +65,10 @@ html {
    border-radius: 9999px;
    text-decoration: underline;
    cursor: pointer;
+}
+
+/* Main */
+
+.main-column {
+   border-left: 2px solid;
 }
