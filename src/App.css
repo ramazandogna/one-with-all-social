@@ -19,8 +19,10 @@ html {
 }
 
 .sidebar-logo {
-   font-size: 2rem;
+   font-size: 3rem;
    padding: 1.4rem;
+   text-decoration: underline;
+   color: #585757;
 }
 
 .sidebar-menu-ul {
@@ -66,9 +68,51 @@ html {
    text-decoration: underline;
    cursor: pointer;
 }
+.sidebar-profile {
+   background-color: #1da1f2;
+   width: 3rem;
+   height: 3rem;
+   display: flex;
+   border-radius: 9999px;
+   position: relative;
+   margin: auto;
+}
 
 /* Main */
 
 .main-column {
-   border-left: 2px solid;
+   border-left: 0.5px solid;
+   border-right: 0.5px solid;
+   padding-left: 6px;
+   height: 100vh;
+   position: relative;
+}
+
+.main-column-title {
+   display: flex;
+   margin-left: 1rem;
+}
+
+.main-column-share {
+   padding: 1rem;
+   display: flex;
+   border-top: 1px solid #585757;
+   border-bottom: 1px solid #585757;
+   border-color: #585757;
+   margin-left: -5px;
+}
+
+.main-column-tweet {
+   display: flex;
+   align-items: center;
+   margin-left: 1rem;
+}
+
+.main-column-profile {
+   background-color: #1da1f2;
+   width: 3rem;
+   height: 3rem;
+   display: flex;
+   border-radius: 9999px;
+   position: relative;
 }

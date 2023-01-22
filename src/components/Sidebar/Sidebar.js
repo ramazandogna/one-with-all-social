@@ -4,8 +4,11 @@ import React from 'react';
 function Sidebar() {
    return (
       <div className="sidebar-menu">
-         <div className="sidebar-logo">LOGO</div>
+         <div className="sidebar-logo">OWA</div>
          <ul class="sidebar-menu-ul">
+            <li>
+               <a href="#" className="sidebar-profile"></a>
+            </li>
             <li class="sidebar-menu-element">
                <a href="#">Home</a>
             </li>
