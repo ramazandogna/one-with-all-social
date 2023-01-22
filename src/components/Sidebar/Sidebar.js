@@ -19,7 +19,7 @@ function Sidebar() {
             </li>
          </ul>
          <div className="sidebar-share">
-            <a href="/">O</a>
+            <a href="/">Share</a>
          </div>
       </div>
    );
