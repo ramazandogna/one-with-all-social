@@ -6,13 +6,13 @@ import Sidebar from './components/Sidebar/Sidebar';
 function App() {
    return (
       <div className="container">
-         <span className="column">
+         <span className="column1">
             <Sidebar />
          </span>
-         <span className="column">
+         <span className="column2">
             <MainColumn />
          </span>
-         <span className="column">column 3 / info</span>
+         <span className="column3"></span>
       </div>
    );
 }

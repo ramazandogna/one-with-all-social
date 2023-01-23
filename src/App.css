@@ -1,17 +1,17 @@
-html {
-   margin: 0;
-   padding: 0;
-   scroll-behavior: smooth;
-}
-
 .container {
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(5, 1fr);
    height: 100vh;
 }
 
-.column {
+.column1 {
    grid-column: span 1;
+}
+.column2 {
+   grid-column: span 2;
+}
+.column3 {
+   grid-column: span 2;
 }
 
 .sidebar-menu {
@@ -149,18 +149,22 @@ html {
 
 .buttons {
    display: flex;
-   justify-content: space-between;
-   margin-left: 32%;
-   margin-right: 32%;
+   margin-left: 35%;
+   margin-right: auto;
+   margin-bottom: 0.2rem;
 }
 
 .like-button {
-   display: flex;
+   margin-right: 0.1rem;
+}
+
+.disliked-button {
 }
 
 .like-count {
-   font-size: small;
+   font-size: 0.8rem;
    text-align: center;
    margin-top: auto;
    margin-bottom: auto;
+   margin-left: 0.3rem;
 }
