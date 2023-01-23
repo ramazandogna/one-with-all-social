@@ -14,7 +14,9 @@ class MainColumn extends Component {
                      <a href="" className="main-column-user-profile"></a>
                   </span>
                   <div>
-                     <h2 className="main-column-user-name">User Name</h2>
+                     <div className="user-head">
+                        <h2 className="main-column-user-name">User Name</h2>
+                     </div>
                      <p className="tweet-content">
                         123123123 123123123 123123123 123123 123123123 123123
                         123123123 123123123 123123123 123123 123123123 123123
@@ -26,7 +28,8 @@ class MainColumn extends Component {
                </div>
                <div className="buttons">
                   <button className="like-button">+1</button>
-                  <button className="dislike-button">+1</button>
+                  <button className="dislike-button">-1</button>
+                  <div className="like-count">123</div>
                </div>
             </div>
          </div>

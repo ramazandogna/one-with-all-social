@@ -157,3 +157,10 @@ html {
 .like-button {
    display: flex;
 }
+
+.like-count {
+   font-size: small;
+   text-align: center;
+   margin-top: auto;
+   margin-bottom: auto;
+}
