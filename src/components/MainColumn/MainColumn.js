@@ -21,7 +21,7 @@ function MainColumn() {
          <div className="main-column-user-container">
             <div className="main-column-user">
                <span>
-                  <a href="" className="main-column-user-profile"></a>
+                  <a href="#" className="main-column-user-profile"></a>
                </span>
                <div>
                   <div className="user-head">
@@ -37,8 +37,12 @@ function MainColumn() {
                </div>
             </div>
             <div className="buttons">
-               <button className="like-button">+1</button>
-               <button className="dislike-button">-1</button>
+               <button onClick={LikeClick} className="like-button">
+                  +1
+               </button>
+               <button onClick={DislikeClick} className="dislike-button">
+                  -1
+               </button>
                <div className="like-count">{likeCount}</div>
             </div>
          </div>
