@@ -3,15 +3,29 @@ import React, { useContext } from 'react';
 import { GlobalContext } from '../../context/GlobalState';
 
 function MainColumn() {
-   const { likeCount, setLikeCount } = useContext(GlobalContext);
-
-   const DislikeClick = () => {
-      setLikeCount(likeCount - 1);
-   };
+   const {
+      likeCount,
+      setLikeCount,
+      isLikeDisabled,
+      setIsLikeDisabled,
+      isDislikeDisabled,
+      setIsDislikeDisabled,
+   } = useContext(GlobalContext);
 
    const LikeClick = () => {
+      setIsLikeDisabled(true);
+      setIsDislikeDisabled(false);
       setLikeCount(likeCount + 1);
    };
+
+   const DislikeClick = () => {
+      setIsLikeDisabled(false);
+      setIsDislikeDisabled(true);
+      if (likeCount > 0) {
+         setLikeCount(likeCount - 1);
+      }
+   };
+
    return (
       <div className="main-column">
          <h2 className="main-column-title">Homepage</h2>
@@ -37,10 +51,18 @@ function MainColumn() {
                </div>
             </div>
             <div className="buttons">
-               <button onClick={LikeClick} className="like-button">
+               <button
+                  disabled={isLikeDisabled}
+                  onClick={LikeClick}
+                  className="like-button"
+               >
                   +1
                </button>
-               <button onClick={DislikeClick} className="dislike-button">
+               <button
+                  disabled={isDislikeDisabled}
+                  onClick={DislikeClick}
+                  className="dislike-button"
+               >
                   -1
                </button>
                <div className="like-count">{likeCount}</div>
