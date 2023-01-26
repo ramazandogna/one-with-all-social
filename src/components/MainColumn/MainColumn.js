@@ -28,9 +28,9 @@ function MainColumn() {
 
    return (
       <div className="main-column">
-         <h2 className="main-column-title">Homepage</h2>
-         <div className="main-column-share">
-            <p className="main-column-tweet">Neler Oluyor??</p>
+         <h2 className="main-column-title">Anasayfa</h2>
+         <div className="main-column-tweet">
+            <p className="whats-going-on">Neler Oluyor??</p>
          </div>
          <div className="main-column-user-container">
             <div className="main-column-user">
@@ -42,11 +42,17 @@ function MainColumn() {
                      <h2 className="main-column-user-name">User Name</h2>
                   </div>
                   <p className="tweet-content">
-                     123123123 123123123 123123123 123123 123123123 123123
-                     123123123 123123123 123123123 123123 123123123 123123
-                     123123123 123123123 123123123 123123 123123123 123123
-                     123123123 123123123 123123123 123123 123123123 123123
-                     123123123 123123123 123123123 123123 123123123 123123
+                     Lorem Ipsum is simply dummy text of the printing and
+                     typesetting industry. Lorem Ipsum has been the industry's
+                     standard dummy text ever since the 1500s, when an unknown
+                     printer took a galley of type and scrambled it to make a
+                     type specimen book. It has survived not only five
+                     centuries, but also the leap into electronic typesetting,
+                     remaining essentially unchanged. It was popularised in the
+                     1960s with the release of Letraset sheets containing Lorem
+                     Ipsum passages, and more recently with desktop publishing
+                     software like Aldus PageMaker including versions of Lorem
+                     Ipsum.
                   </p>
                </div>
             </div>
@@ -65,7 +71,7 @@ function MainColumn() {
                >
                   -1
                </button>
-               <div className="like-count">{likeCount}</div>
+               <div className="like-count"> ♡ {likeCount}</div>
             </div>
          </div>
       </div>

@@ -85,21 +85,24 @@
    border-right: 0.5px solid;
    height: 100vh;
    position: relative;
+   align-items: center;
+   padding-top: 1rem;
 }
 
 .main-column-title {
    display: flex;
-   margin-left: 0.5rem;
+   margin-left: 0.7rem;
 }
 
-.main-column-share {
-   padding-bottom: 1rem;
+.main-column-tweet {
+   text-align: left;
    display: flex;
+   padding: 10px 0;
    border-top: 1px solid #585757;
    border-bottom: 1px solid #585757;
 }
 
-.main-column-tweet {
+.whats-going-on {
    display: flex;
    text-align: center;
    justify-content: center;
@@ -149,22 +152,32 @@
 
 .buttons {
    display: flex;
-   margin-left: 35%;
-   margin-right: auto;
-   margin-bottom: 0.2rem;
+   margin: 0 0 0.2rem 35%;
+   align-items: center;
 }
 
 .like-button {
    margin-right: 0.1rem;
+   color: #585757;
 }
 
 .disliked-button {
+   color: #585757;
+   padding: 5px;
+}
+
+.disliked-button:hover {
+   color: #f2f2f2;
+   background-color: orangered;
+   border-radius: 100%;
 }
 
 .like-count {
-   font-size: 0.8rem;
-   text-align: center;
-   margin-top: auto;
-   margin-bottom: auto;
+   font-size: 0.7rem;
    margin-left: 0.3rem;
+   color: #585757;
+}
+
+.like-count:hover {
+   color: orangered;
 }
