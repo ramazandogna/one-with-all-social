@@ -1,16 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import { GlobalContext } from '../../context/GlobalState';
+import axios from 'axios';
 
 function MainColumn() {
-   const {
-      likeCount,
-      setLikeCount,
-      isLikeDisabled,
-      setIsLikeDisabled,
-      isDislikeDisabled,
-      setIsDislikeDisabled,
-   } = useContext(GlobalContext);
+   // Functions
 
    const LikeClick = () => {
       setIsLikeDisabled(true);
@@ -26,54 +20,73 @@ function MainColumn() {
       }
    };
 
+   // useStates
+
+   const [posts, setPosts] = useState([]);
+
+   // useContext
+
+   const {
+      likeCount,
+      setLikeCount,
+      isLikeDisabled,
+      setIsLikeDisabled,
+      isDislikeDisabled,
+      setIsDislikeDisabled,
+   } = useContext(GlobalContext);
+
+   //useEffect
+
+   useEffect(() => {
+      axios
+         .get('https://jsonplaceholder.typicode.com/posts')
+         .then((res) => {
+            setPosts(res.data);
+         })
+         .catch((err) => {
+            console.error(err);
+         });
+   }, []);
+
    return (
       <div className="main-column">
          <h2 className="main-column-title">Anasayfa</h2>
          <div className="main-column-tweet">
             <p className="whats-going-on">Neler Oluyor??</p>
          </div>
-         <div className="main-column-user-container">
-            <div className="main-column-user">
-               <span>
-                  <a href="#" className="main-column-user-profile"></a>
-               </span>
-               <div>
-                  <div className="user-head">
-                     <h2 className="main-column-user-name">User Name</h2>
+         {posts.map((post) => (
+            <div key={post.id} className="main-column-user-container">
+               <div className="main-column-user">
+                  <span>
+                     <a href="#" className="main-column-user-profile"></a>
+                  </span>
+
+                  <div>
+                     <div className="user-head">
+                        <h2 className="main-column-user-name">{post.title}</h2>
+                     </div>
+                     <p className="tweet-content">{post.body}</p>
                   </div>
-                  <p className="tweet-content">
-                     Lorem Ipsum is simply dummy text of the printing and
-                     typesetting industry. Lorem Ipsum has been the industry's
-                     standard dummy text ever since the 1500s, when an unknown
-                     printer took a galley of type and scrambled it to make a
-                     type specimen book. It has survived not only five
-                     centuries, but also the leap into electronic typesetting,
-                     remaining essentially unchanged. It was popularised in the
-                     1960s with the release of Letraset sheets containing Lorem
-                     Ipsum passages, and more recently with desktop publishing
-                     software like Aldus PageMaker including versions of Lorem
-                     Ipsum.
-                  </p>
+               </div>
+               <div className="buttons">
+                  <button
+                     disabled={isLikeDisabled}
+                     onClick={LikeClick}
+                     className="like-button"
+                  >
+                     +1
+                  </button>
+                  <button
+                     disabled={isDislikeDisabled}
+                     onClick={DislikeClick}
+                     className="dislike-button"
+                  >
+                     -1
+                  </button>
+                  <div className="like-count"> ♡ {likeCount}</div>
                </div>
             </div>
-            <div className="buttons">
-               <button
-                  disabled={isLikeDisabled}
-                  onClick={LikeClick}
-                  className="like-button"
-               >
-                  +1
-               </button>
-               <button
-                  disabled={isDislikeDisabled}
-                  onClick={DislikeClick}
-                  className="dislike-button"
-               >
-                  -1
-               </button>
-               <div className="like-count"> ♡ {likeCount}</div>
-            </div>
-         </div>
+         ))}
       </div>
    );
 }
