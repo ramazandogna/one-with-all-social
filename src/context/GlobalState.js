@@ -6,6 +6,7 @@ function GlobalState({ children }) {
    const [likeCount, setLikeCount] = useState(0);
    const [isLikeDisabled, setIsLikeDisabled] = useState(false);
    const [isDislikeDisabled, setIsDislikeDisabled] = useState(true);
+   const [userPhoto, setUserPhoto] = useState([]);
 
    return (
       <GlobalContext.Provider
@@ -16,6 +17,8 @@ function GlobalState({ children }) {
             setIsLikeDisabled,
             isDislikeDisabled,
             setIsDislikeDisabled,
+            userPhoto,
+            setUserPhoto,
          }}
       >
          {children}

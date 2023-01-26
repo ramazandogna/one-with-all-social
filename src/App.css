@@ -83,7 +83,7 @@
 .main-column {
    border-left: 0.5px solid;
    border-right: 0.5px solid;
-   height: 100vh;
+   height: 100%;
    position: relative;
    align-items: center;
    padding-top: 1rem;
@@ -130,7 +130,6 @@
 }
 
 .main-column-user-profile {
-   background-color: #1da1f2;
    width: 3rem;
    height: 3rem;
    display: flex;
